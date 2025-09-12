@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/style/midias.css">
+    <title>GranaFlow</title>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+<script>
+    fetch('../pages/nav.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('nav-placeholder').innerHTML = data;
+
+            // Aguarda o DOM ser atualizado completamente após o .innerHTML
+            setTimeout(() => {
+                const btn = document.getElementById('btn_esconder');
+                const nav = document.querySelector('.container_nav');
+
+                if (btn && nav) {
+                    btn.addEventListener('click', function () {
+                        if (nav.style.display === 'none') {
+                            nav.style.display = 'flex';
+                            btn.style.left = '40px'
+                        } else {
+                            nav.style.display = 'none';
+                            btn.style.left = '3px'
+                        }
+                    });
+                } else {
+                    console.warn("Botão ou nav não encontrado após fetch");
+                }
+            }, 50); // aguarda 50ms para garantir que foi renderizado
+        });
+</script>
+
+
+</body>
+
+</html>

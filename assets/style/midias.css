@@ -1,0 +1,148 @@
+@media (max-width: 768px) {
+
+    /* NAVEGAAÇÃO LATERAL */
+    .container_nav {
+        width: 110px;
+        height: 100vh;
+        flex-direction: row;
+        position: fixed;
+        display: block;
+    }
+
+    .item {
+        padding: 6px 4px;
+    }
+
+    .btn_nav {
+        font-size: 12px;
+        width: 98px;
+
+    }
+
+    .title_nav {
+        font-size: 14px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .btn_esconder {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 40px;
+        font-size: 33px;
+        color: black;
+    }
+
+    /* TELA HOME / index */
+    .main {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .container_home {
+        padding-left: 0;
+        padding-top: 20px;
+        height: auto;
+    }
+
+    .main_home {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container_home_content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        gap: 16px;
+    }
+
+    .card {
+        width: 70%;
+        height: 100px;
+        margin: 10px 0;
+    }
+
+    .card_title {
+        font-size: 16px;
+    }
+
+    .card_valor {
+        font-size: 22px;
+    }
+
+    .container_home_title {
+        font-size: 32px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* transaçoes */
+    .container_center {
+        padding-top: 1rem;
+        height: auto;
+        align-items: center;
+    }
+
+    .container_center_subtitle {
+        font-size: 24px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .tabela_transacoes {
+        width: 100%;
+        height: auto;
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 600px;
+        /* força scroll horizontal em telas pequenas */
+    }
+
+    #header_table,
+    .table_row {
+        font-size: 14px;
+    }
+
+    .table_row td,
+    .table_row th {
+        padding: 6px;
+    }
+
+    #row_manual {
+        padding: 6px;
+    }
+
+    /* formulario oculto */
+
+    #form-container {
+        width: 90vw;
+        padding: 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        gap: 16px;
+    }
+
+    #form-container>div {
+        gap: 12px;
+    }
+
+    #form-container select,
+    #form-container input {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    #form-container button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}

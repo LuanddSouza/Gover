@@ -1,0 +1,82 @@
+# 💼 GranaFlow (SaaS Privado)
+
+Sistema completo de gestão financeira pessoal — com frontend responsivo, backend em Flask, integração com banco de dados e estrutura modular pronta para escalar como um produto SaaS.
+
+---
+
+## 🔐 Este projeto é privado e protegido
+
+- Contém regras de negócio exclusivas
+- Integração com banco de dados
+- Arquitetura pensada para produto
+- Controle de usuários e dados reais
+
+---
+
+## ✅ Funcionalidades
+
+- Autenticação de usuários
+- Cadastro e edição de movimentações financeiras
+- Cálculo dinâmico de receitas, despesas e saldo
+- Geração de relatórios
+- API REST para integração com o frontend
+- Layout 100% responsivo (mobile-first)
+- Segurança com variáveis de ambiente (`.env`)
+
+---
+
+## 📦 Tecnologias Utilizadas
+
+### Frontend:
+- HTML5, CSS3, JavaScript puro
+- Font Awesome e Google Fonts
+- Estrutura modular (nav, páginas, componentes)
+
+### Backend:
+- Python 3.12+
+- Flask
+- PostgreSQL (ou MongoDB)
+- SQLAlchemy (ou PyMongo)
+- JWT para autenticação
+
+---
+
+## ⚙️ Estrutura Sugerida
+
+granaflow-saas/
+├── app/
+│ ├── routes/
+│ ├── models/
+│ ├── controllers/
+│ └── init.py
+├── templates/
+├── static/
+├── .env
+├── app.py
+├── requirements.txt
+└── README.md
+
+
+---
+
+## 🧪 Como rodar localmente
+
+```bash
+# 1. Clone o projeto privado
+git clone https://github.com/seu-usuario/granaflow-saas.git
+cd granaflow-saas
+
+# 2. Crie e ative o ambiente virtual
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# 3. Instale as dependências
+pip install -r requirements.txt
+
+# 4. Configure o arquivo .env
+# Exemplo de conteúdo:
+# DATABASE_URL=postgresql://usuario:senha@localhost/granaflow
+# SECRET_KEY=chave_secreta_aqui
+
+# 5. Execute o app
+python app.py
