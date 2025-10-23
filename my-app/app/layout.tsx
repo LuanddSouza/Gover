@@ -1,8 +1,8 @@
-import Sidebar from "./components/Sidebar";
+import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 
 export const metadata = {
-  title: "GranaFlow",
+  title: "Gover - Gestão Financeira",
   description: "Gestão Financeira Inteligente",
 };
 
