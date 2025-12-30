@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "desc": "Salário",
+        "type": "Entrada",
+        "category": "Renda",
+        "value": "R$ 3.000,00"
+    },
+    {
+        "id": 2,
+        "desc": "Aluguel",
+        "type": "Saída",
+        "category": "Moradia",
+        "value": "R$ 1.200,00"
+    },
+    {
+        "id": 3,
+        "desc": "Internet",
+        "type": "Saída",
+        "category": "Serviços",
+        "value": "R$ 120,00"
+    },
+    {
+        "id": 4,
+        "desc": "Supermercado",
+        "type": "Saída",
+        "category": "Alimentação",
+        "value": "R$ 450,00"
+    },
+    {
+        "id": 5,
+        "desc": "Freelance",
+        "type": "Entrada",
+        "category": "Extra",
+        "value": "R$ 800,00"
+    },
+    {
+        "id": 6,
+        "desc": "Academia",
+        "type": "Saída",
+        "category": "Saúde",
+        "value": "R$ 90,00"
+    }
+]

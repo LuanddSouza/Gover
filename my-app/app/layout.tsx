@@ -1,4 +1,5 @@
 import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
 import "./globals.css";
 
 export const metadata = {
@@ -9,9 +10,17 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-br">
-      <body className="flex">
+      <body className="bg-gray-100">
         <Sidebar />
-        <main className="flex-1 bg-gray-100 min-h-screen">{children}</main>
+
+        <main className="ml-56 flex flex-col min-h-screen">
+          {/* Header fixo */}
+          <Header />
+  
+          <div className="flex-1 overflow-y-auto">
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );
