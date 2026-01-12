@@ -1,12 +1,12 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Cog6ToothIcon } from "@heroicons/react/24/outline";
 import { Home, BarChart3, FileText, CreditCard, Layers } from "lucide-react";
 
 export default function Sidebar() {
-  const [active, setActive] = useState("Dashboard");
+  const pathname = usePathname();
 
   const menuItems = [
     { name: "Início", href: "/", icon: Home },
@@ -28,21 +28,26 @@ export default function Sidebar() {
 
         {/* Menu */}
         <nav className="flex flex-col gap-2 px-4">
-          {menuItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={() => setActive(item.name)}
-              className={`flex items-center px-3 py-2 rounded-md text-sm transition ${
-                active === item.name
-                  ? "bg-[var(--azul-gover)] text-white"
-                  : "text-[var(--text)] hover:bg-gray-500 hover:text-white"
-              }`}
-            >
-              <item.icon className="mr-2 h-4 w-4" />
-              {item.name}
-            </Link>
-          ))}
+          {menuItems.map((item) => {
+            const isActive =
+              pathname === item.href ||
+              pathname.startsWith(item.href + "/");
+
+            return (
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`flex items-center px-3 py-2 rounded-md text-sm transition ${
+                  isActive
+                    ? "bg-[var(--azul-gover)] text-white"
+                    : "text-[var(--text)] hover:bg-gray-500 hover:text-white"
+                }`}
+              >
+                <item.icon className="mr-2 h-4 w-4" />
+                {item.name}
+              </Link>
+            );
+          })}
         </nav>
       </div>
 
